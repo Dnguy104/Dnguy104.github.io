@@ -7,7 +7,8 @@
 
 <!-- styles -->
 <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="/stylesheets/style.css" rel="stylesheet">
+<!-- <link href="/stylesheets/style.css" rel="stylesheet">
+-->
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif" rel="stylesheet">
 
@@ -64,12 +65,16 @@
 .navbar-brand { 
 	font-size: 35px;
 	font-weight: 600;
+	font-family: 'Droid Serif', serif;
+	    color:  #d1d1d1;
+    transition: color 200ms linear;
 } 
 
 .navbar-nav > li{
 
   	font-size: 20px;
   	font-weight: bold;
+  	
 
 }
 .navbar .nav > li > a,.navbar .navbar-header > a {
@@ -92,7 +97,6 @@ html * {
 
 body {
   font-size: 100%;
-  font-family: 'Droid Serif', serif;
   background-size: cover;
 }
 
@@ -119,7 +123,12 @@ Modules - reusable parts of our design
   max-width: 1600px;
   margin: 0 auto;
 }
-
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
 
 .cd-main-content {
   /* you need to assign a min-height to the main content so that the children can inherit it*/
@@ -127,6 +136,7 @@ Modules - reusable parts of our design
   width: 100%;
   position: relative;
   z-index: 1;
+  font-family: 'Droid Serif', serif;
 }
 
 
@@ -141,6 +151,7 @@ Modules - reusable parts of our design
 	-ms-transform: translateX(-50%) translateY(-50%);
 	-o-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
+
 	width: 100%;
 	text-align: center;
 	font-size: 30px;
@@ -157,25 +168,25 @@ Modules - reusable parts of our design
 
 .cd-fixed-bg.cd-bg-1 {
   	background-image: url("/images/laptop.jpg");
-  	position: relative;
-  	min-height: 100%;
-  	background-size: cover;
-  	background-repeat: no-repeat;
-  	background-position: center center;
-  	z-index: 1;
 }
 
 .cd-fixed-bg.cd-bg-3 {
   	background-image: url("/images/laptop2.jpg");
-   	position: relative;
-  	min-height: 80%;
+}
+.cd-fixed-bg {
+	min-height: 100%;
+	position: relative;
   	background-size: cover;
   	background-repeat: no-repeat;
   	background-position: center center;
   	z-index: 1;
 }
 
-
+@media only screen and (min-width: 480px) {
+  .cd-fixed-bg {
+    background-attachment: fixed;
+  }
+}
 
 .cd-scrolling-bg {
   position: relative;
