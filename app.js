@@ -37,7 +37,6 @@ var express = require('express');
 
 var engine = require('ejs-locals');
 var path = require('path');
-var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -45,8 +44,6 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var contact = require('./routes/contact');
 var project = require('./routes/project');
-
-var config = require('./config');
 
 var app = express();
 
