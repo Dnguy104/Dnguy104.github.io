@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include templates/head.ejs%>
+    <script>
+		$(function () {
+		  $(document).scroll(function () {
+			  var $nav = $(".navbar-fixed-top");
+			  $nav.toggleClass('scrolled', $(this).scrollTop() > 440);
+			});
+		});
+	</script>
+</head>
+
+<body >
+
+	<% include templates/nav.ejs%>
+	<%- body %>
+
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<meta charset="utf-8">
+<title><%= title %></title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="personal wensite">
+<meta name="author" content="Daniel Nguyen">
+
+<!-- styles -->
+<link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/stylesheets/style.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif" rel="stylesheet">
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+<!-- Need mroe Bootstrap features? Uncomment some lines below. -->
+<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+<!--
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-alert.js"></script>
+<script src="js/bootstrap-modal.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="js/bootstrap-scrollspy.js"></script>
+<script src="js/bootstrap-tab.js"></script>
+<script src="js/bootstrap-tooltip.js"></script>
+<script src="js/bootstrap-popover.js"></script>
+<script src="js/bootstrap-button.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+<script src="js/bootstrap-carousel.js"></script>
+<script src="js/bootstrap-typeahead.js"></script>
+-->  
+
+<!-- icon links -->
+
+<style>
+
+.navbar-fixed-top.scrolled {
+  background-color: #f7f6f2 !important;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  transition: background-color 200ms linear;
+}
+
+
+.navbar-fixed-top.scrolled .nav > li > a,.navbar-fixed-top.scrolled .navbar-header > a {
+    color:#3f505e;
+    transition: color 200ms linear;
+    
+}
+
+.navbar-fixed-top.scrolled .nav > li > a:hover,.navbar-fixed-top.scrolled .navbar-header > a:hover {
+    color:#81a6c4;
+}
+
+.navbar {
+   	background-color: rgba(0,0,0,0.25) ;   	
+   	box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+   	
+   	padding-top: 5px;
+   	padding-bottom: 5px;
+   	border-bottom: 1px solid rgba(249,248,239,.5);
+   	transition: background-color 200ms linear;
+}
+
+.navbar-brand { 
+	font-size: 35px;
+	font-weight: 600;
+} 
+
+.navbar-nav > li{
+
+  	font-size: 20px;
+  	font-weight: bold;
+
+}
+.navbar .nav > li > a,.navbar .navbar-header > a {
+    color:  #d1d1d1;
+    transition: color 200ms linear;
+}
+
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-size: 100%;
+  font-family: 'Droid Serif', serif;
+  background-size: cover;
+}
+
+.text {
+	font-size: 130%;
+}
+
+.text h2 {
+	font-weight: bold;
+}
+
+body, html {
+  height: 100%;
+}
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+
+.cd-main-content {
+  /* you need to assign a min-height to the main content so that the children can inherit it*/
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+
+.cd-fixed-bg .h123 {
+  	position: absolute;
+  	left: 50%;
+  	top: 42%;
+  	bottom: auto;
+	right: auto;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	color: white;
+}
+.cd-fixed-bg .h123 h1, .cd-fixed-bg .h123 h2{
+	font-weight: bold;
+}
+  .cd-fixed-bg h1 {
+    font-size: 90px;
+  }
+
+
+.cd-fixed-bg.cd-bg-1 {
+  	background-image: url("/images/laptop.jpg");
+  	position: relative;
+  	min-height: 100%;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+  	z-index: 1;
+}
+
+.cd-fixed-bg.cd-bg-3 {
+  	background-image: url("/images/laptop2.jpg");
+   	position: relative;
+  	min-height: 80%;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+  	z-index: 1;
+}
+
+
+
+.cd-scrolling-bg {
+  position: relative;
+  min-height: 50%;
+  padding: 4em 0;
+  line-height: 1.6;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  background-color: #f4f6f9;
+}
+
+.footer-text {
+	padding-top: 25px;
+	padding-bottom: 120px;
+  	background-color: #3f505e;
+  	text-align: center;
+  	z-index:3;
+  	font-size: 160%;
+  	color:#d3dce5;
+}
+
+.svg{
+	fill: #d3dce5;
+
+}
+
+
+
+.links {
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-top: 60px;
+		padding-bottom: 55px;
+
+}
+
+.svg:hover {
+	fill: white;
+	position: relative;
+	top: -10px;
+	transition-duration:  300ms;
+}
+
+
+</style>
+
+
+
+
