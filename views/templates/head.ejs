@@ -55,25 +55,22 @@
 }
 
 .navbar-fixed-top .navbar-right li:hover { 
-    background-color:rgba(0, 0, 0, 0.5);
-    transition: background-color 200ms linear;
+    background-color:rgba(255, 255, 255, 0.1);
 }
 
 .navbar-fixed-top.scrolled .navbar-right li:hover { 
-    background-color:rgba(0, 0, 0, 0.05);
-    transition: background-color 200ms linear;
+    background-color:rgba(0, 0, 0, 0.07);
+
 }
 
 .navbar-fixed-top .navbar-toggle:focus, .navbar-fixed-top.scrolled .navbar-toggle:focus { 
     background-color:transparent;
 }
 
-.navbar-fixed-top.scrolled .navbar-toggle:focus { 
-    outline: none; 
-}
 
 .navbar-fixed-top.scrolled .navbar-toggle:hover {
     background-color: #aaaaaa;
+    transition: background-color 200ms linear;
 }
 
 .navbar-fixed-top.scrolled .nav > li > a,.navbar-fixed-top.scrolled .navbar-header > a {
@@ -82,15 +79,21 @@
 
 .navbar-fixed-top.scrolled .nav > li > a:hover,.navbar-fixed-top.scrolled .navbar-header > a:hover {
     color:#81a6c4;
+    transition: background-color 200ms linear;
 }
 
 .navbar-fixed-top.scrolled .nav > li > a:focus,.navbar-fixed-top.scrolled .navbar-header > a:focus {
     outline: none;
 }
 
+.navbar-fixed-top .nav > li > a:focus,.navbar-fixed-top .navbar-header > a:focus {
+    outline: none;
+
+}
+
 
 .navbar {
-    background-color: rgba(0,0,0,0.25) ;    
+    background-color: rgba(0,0,0,0.7) ;    
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
     
     padding-top: 2px;
@@ -115,7 +118,7 @@
 
 }
 .navbar .nav > li > a,.navbar .navbar-header > a {
-    color:  #d1d1d1;
+    color:  #d1d1d1; !important
     transition: color 200ms linear;
 }
 
@@ -150,10 +153,6 @@ body, html {
 Modules - reusable parts of our design
 
 -------------------------------- */
-.cd-container {
-  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-
-}
 
 
 .cd-main-content {
@@ -184,13 +183,13 @@ Modules - reusable parts of our design
   color: white;
 }
 .cd-fixed-bg h2{
-  font-weight: bold;
-  font-size: 2vw;
+    font-weight: bold;
+    font-size: 2vw;
 }
-  .cd-fixed-bg h1 {
+.cd-fixed-bg h1 {
     font-weight: bold;
     font-size: 6vw;
-  }
+}
 
 
 .cd-fixed-bg.cd-bg-1 {
@@ -234,11 +233,8 @@ Modules - reusable parts of our design
 }
 
 @media only screen and (min-width: 768px) {
-    .row.text {
-        width: 90%;
-        margin: 0 auto;
 
-    }
+
 }
 
 .cd-scrolling-bg {
@@ -256,22 +252,16 @@ Modules - reusable parts of our design
     background-color: #3f505e;
     text-align: center;
     z-index:3;
-    font-size: 160%;
+    font-size: 130%;
     color:#d3dce5;
     
 }
 
-.svg{
+svg{
   fill: #d3dce5;
-
+  width:90px;
 }
 
-
-
-.col-sm-4 p{
-
-    line-height: 1.8;
-}
 
 
 .links {
@@ -280,16 +270,65 @@ Modules - reusable parts of our design
 
 }
 
-.svg:hover {
+svg:hover {
   fill: white;
   position: relative;
   top: -10px;
   transition-duration:  300ms;
 }
 
+.container {
+    background-color: rgba(0,0,0,0.1);
+    width:90%;
+}
+
+.container h2 {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.container:after { /*clear float*/
+    content: "";
+    display: table;
+    clear: both;
+}
+.container > div {
+    float: left;
+    width: 33.33%;
+    background-color: rgba(0,0,0,0.2);
+    padding-left: 5px;
+    padding-right: 5px;
+    line-height: 1.8;
+}
+
+@media (max-width: 1000px) { /*breakpoint*/
+    .container > div {
+        float: none;
+        width: 100%;
+        line-height: 1.8;
+    }
+    .container h2 {
+    font-size: 30px;
+    font-weight: bold;
+    }
+    
+    .footer-text {
+        font-size: 100%;
+    }
+    
+
+}
+
 
 </style>
 
-
+<script>
+    $(function () {
+      $(document).scroll(function () {
+          var $nav = $(".navbar-fixed-top");
+          $nav.toggleClass('scrolled', $(this).scrollTop() > 10);
+        });
+    });
+</script>
 
 
