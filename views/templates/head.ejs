@@ -103,10 +103,9 @@
 }
 
 .navbar-brand { 
-  font-size: 35px;
-  font-weight: 600;
-  font-family: 'Droid Serif', serif;
-      color:  #d1d1d1;
+    font-size: 35px;
+    font-weight: bold;
+    color:  #d1d1d1;
     transition: color 200ms linear;
 } 
 
@@ -175,24 +174,10 @@ Modules - reusable parts of our design
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   color: white;
 }
-.cd-fixed-bg h2{
-    font-weight: bold;
-    font-size: 2vw;
-}
-.cd-fixed-bg h1 {
-    font-weight: bold;
-    font-size: 6vw;
-}
 
 
-.cd-fixed-bg.cd-bg-1 {
-    background-image: url("/images/laptop.jpg");
-}
-
-.cd-fixed-bg.cd-bg-3 {
-    background-image: url("/images/laptop2.jpg");
-}
 .cd-fixed-bg {
+    font-weight: bold;
     min-height: 100%;
     position: relative;
     background-size: cover;
@@ -203,18 +188,58 @@ Modules - reusable parts of our design
 }
 
 @media only screen and (max-width: 480px) {
+    .cd-fixed-bg h2{
+    font-weight: bold;
+    font-size: 10px;
+    }
+    .cd-fixed-bg h1 {
+        font-weight: bold;
+        font-size: 30px;
+    }
+}
 
+
+@media only screen and (min-width: 480px) {
+        .cd-fixed-bg.cd-bg-1 {
+            background-image: url("/images/laptop.jpg");
+        }
+
+        .cd-fixed-bg.cd-bg-3 {
+            background-image: url("/images/laptop2.jpg");
+        }
 }
 
 @media only screen and (max-width: 768px) {
-        .footer-text {
-            font-size: 100%;
-        }
+    .footer-text {
+        font-size: 100%;
+    }
+        
+    .navbar-brand { 
+        font-size: 20px;
+    }         
+    
+    .cd-fixed-bg h2{
+    font-weight: bold;
+    font-size: 20px;
+    }
+    .cd-fixed-bg h1 {
+        font-weight: bold;
+        font-size: 60px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
         .footer-text {
             font-size: 130%;
+        }
+        
+        .cd-fixed-bg h2{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .cd-fixed-bg h1 {
+            font-weight: bold;
+            font-size: 90px;
         }
 }
 
@@ -296,8 +321,6 @@ svg:hover {
     font-weight: bold;
     }
     
-    
-
 }
 
 
