@@ -26,21 +26,6 @@
     </div>
 </div>
 
-<script>
-    $(document).ready(function(){       
-       var scroll_start = 0;
-       var startchange = $('#startchange');
-       var offset = startchange.offset();
-       $(document).scroll(function() { 
-          scroll_start = $(this).scrollTop();
-          if(scroll_start > offset.top) {
-              $('.navbar').css('background-color', 'white');
-           } else {
-              $('.navbar').css('background-color', 'rgba(0,0,0,0.25)');
-           }
-       });
-    });
-</script>
 
 
 <!-- Modal -->
