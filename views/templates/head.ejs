@@ -136,13 +136,6 @@ html * {
 
 
 
-.text > .col-sm-4 > h2 {
-  font-weight: bold;
-  padding-bottom: 10px;
-  font-size:2.5vw;
-  
-}
-
 body, html {
   height: 100%;
   font-family: 'Droid Serif', serif;
@@ -210,63 +203,48 @@ Modules - reusable parts of our design
 }
 
 @media only screen and (max-width: 480px) {
-    .cd-fixed-bg {
-      background-attachment: fixed;
-    }
-    
-    .cd-container {
-      /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
 
-      max-width: 460px;
-      margin: 0 auto;
-    }
-    
-    .cd-fixed-bg h1 {
-      font-size: 48px;
-      font-weight: bold;
-    }
-    
-    .cd-fixed-bg h2 {
-      font-size: 30px;
-      font-weight: bold;
-    }
+}
+
+@media only screen and (max-width: 768px) {
+        .footer-text {
+            font-size: 100%;
+        }
 }
 
 @media only screen and (min-width: 768px) {
-
-
+        .footer-text {
+            font-size: 130%;
+        }
 }
 
 .cd-scrolling-bg {
       position: relative;
-      min-height: 50%;
-      padding: 4em 0;
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
       z-index: 2;
       background-color: #f4f6f9;
 }
 
 .footer-text {
-    padding-top: 25px;
-    padding-bottom: 120px;
+    padding-top: 20px;
+    padding-bottom: 50px;
     background-color: #3f505e;
     text-align: center;
     z-index:3;
-    font-size: 130%;
     color:#d3dce5;
     
 }
 
 svg{
   fill: #d3dce5;
-  width:90px;
+
 }
 
 
 
 .links {
     padding-top: 60px;
-    padding-bottom: 55px;
+    padding-bottom: 40px;
 
 }
 
@@ -278,7 +256,9 @@ svg:hover {
 }
 
 .container {
-    background-color: rgba(0,0,0,0.1);
+    padding-top: 50px;
+    padding-bottom: 50px;
+
     width:90%;
 }
 
@@ -289,17 +269,21 @@ svg:hover {
 
 .container:after { /*clear float*/
     content: "";
+
     display: table;
     clear: both;
 }
 .container > div {
     float: left;
     width: 33.33%;
-    background-color: rgba(0,0,0,0.2);
-    padding-left: 5px;
-    padding-right: 5px;
+
     line-height: 1.8;
 }
+
+.container > div > p {
+    padding: 10px;
+}
+
 
 @media (max-width: 1000px) { /*breakpoint*/
     .container > div {
@@ -312,9 +296,6 @@ svg:hover {
     font-weight: bold;
     }
     
-    .footer-text {
-        font-size: 100%;
-    }
     
 
 }
