@@ -32,13 +32,12 @@
 -->  
 
 <!-- icon links -->
-
 <style>
 
 
 .navbar-fixed-top.scrolled {
   background-color: #f7f6f2 !important;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
   transition: background-color 200ms linear;
 }
 
@@ -65,6 +64,7 @@
 
 .navbar-fixed-top .navbar-toggle:focus, .navbar-fixed-top.scrolled .navbar-toggle:focus { 
     background-color:transparent;
+    
 }
 
 
@@ -84,6 +84,7 @@
 
 .navbar-fixed-top.scrolled .nav > li > a:focus,.navbar-fixed-top.scrolled .navbar-header > a:focus {
     outline: none;
+
 }
 
 .navbar-fixed-top .nav > li > a:focus,.navbar-fixed-top .navbar-header > a:focus {
@@ -93,17 +94,18 @@
 
 
 .navbar {
-    background-color: rgba(0,0,0,0.7) ;    
+    background-color: transparent;    
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-    
-    padding-top: 2px;
-    padding-bottom: 2px;
-    border-bottom: 1px solid rgba(249,248,239,.5);
+    border: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
     transition: background-color 200ms linear;
 }
 
 .navbar-brand { 
-    font-size: 35px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 2em;
     font-weight: bold;
     color:  #d1d1d1;
     transition: color 200ms linear;
@@ -111,7 +113,7 @@
 
 .navbar-nav > li{
 
-    font-size: 16px;
+    font-size: 0.88em;
     font-weight: bold;
     
 
@@ -137,7 +139,7 @@ html * {
 
 body, html {
   height: 100%;
-  font-family: 'Droid Serif', serif;
+
 }
 
 /* -------------------------------- 
@@ -174,7 +176,13 @@ Modules - reusable parts of our design
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   color: white;
 }
+.cd-fixed-bg.cd-bg-1 {
+    background-image: url("/images/1080laptop.jpg");
+}
 
+.cd-fixed-bg.cd-bg-3 {
+    background-image: url("/images/1080laptop2.jpg");
+}
 
 .cd-fixed-bg {
     font-weight: bold;
@@ -190,23 +198,19 @@ Modules - reusable parts of our design
 @media only screen and (max-width: 480px) {
     .cd-fixed-bg h2{
     font-weight: bold;
-    font-size: 10px;
+    font-size: 1.5em;
     }
     .cd-fixed-bg h1 {
         font-weight: bold;
-        font-size: 30px;
+        font-size: 2.5em;
     }
+    
+
 }
 
 
 @media only screen and (min-width: 480px) {
-        .cd-fixed-bg.cd-bg-1 {
-            background-image: url("/images/laptop.jpg");
-        }
-
-        .cd-fixed-bg.cd-bg-3 {
-            background-image: url("/images/laptop2.jpg");
-        }
+    
 }
 
 @media only screen and (max-width: 768px) {
@@ -220,11 +224,11 @@ Modules - reusable parts of our design
     
     .cd-fixed-bg h2{
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.3em;
     }
     .cd-fixed-bg h1 {
         font-weight: bold;
-        font-size: 60px;
+        font-size: 4.5em;
     }
 }
 
@@ -232,37 +236,44 @@ Modules - reusable parts of our design
         .footer-text {
             font-size: 130%;
         }
-        
         .cd-fixed-bg h2{
             font-weight: bold;
-            font-size: 30px;
+            font-size: 1.7em;
         }
         .cd-fixed-bg h1 {
             font-weight: bold;
-            font-size: 90px;
+            font-size: 6em;
+            
         }
 }
 
-.cd-scrolling-bg {
+.cd-scrolling-bg.cd-color-4{
+      position: relative;
+      z-index: 2;
+      background-color: #f0efef;
+      margin: 0; 
+}
+
+.cd-scrolling-bg.cd-color-2, .cd-scrolling-bg.cd-color-3{
       position: relative;
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
       z-index: 2;
-      background-color: #f4f6f9;
+      background-color: #f2f2f2;
+      margin: 0; 
 }
 
 .footer-text {
     padding-top: 20px;
     padding-bottom: 50px;
-    background-color: #3f505e;
+    background-color: #222845;
     text-align: center;
     z-index:3;
-    color:#d3dce5;
+    color:white;
     
 }
 
 svg{
-  fill: #d3dce5;
-
+  fill: #f2f2f2;
 }
 
 
@@ -273,8 +284,8 @@ svg{
 
 }
 
-svg:hover {
-  fill: white;
+svg:hover{
+  fill: #c49f66;
   position: relative;
   top: -10px;
   transition-duration:  300ms;
@@ -288,8 +299,14 @@ svg:hover {
 }
 
 .container h2 {
-    font-size: 35px;
+    font-size: 2em;
     font-weight: bold;
+    color:#4a4a4a;
+    
+}
+
+.container p {
+    color:#4a4a4a;
 }
 
 .container:after { /*clear float*/
@@ -305,8 +322,8 @@ svg:hover {
     line-height: 1.8;
 }
 
-.container > div > p {
-    padding: 10px;
+.container .header {
+    color:#4a4a4a;
 }
 
 
@@ -316,11 +333,20 @@ svg:hover {
         width: 100%;
         line-height: 1.8;
     }
-    .container h2 {
-    font-size: 30px;
-    font-weight: bold;
-    }
     
+}
+
+ .contact-form {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: table;
+    margin: 0 auto;
+    color:#4a4a4a;
+}
+
+.contact-form h2{
+    text-align: center;
+    color:#4a4a4a;
 }
 
 
@@ -333,6 +359,10 @@ svg:hover {
           $nav.toggleClass('scrolled', $(this).scrollTop() > 10);
         });
     });
+    
+        $(window).scroll(function(){
+        $(".cd-fixed-bg .h123").css("opacity", 1 - $(window).scrollTop() / 150);
+      });
 </script>
 
 

@@ -44,6 +44,34 @@
 			
 		</div> <!-- cd-scrolling-bg -->
 		
+		<div class="cd-scrolling-bg cd-color-4" >
+			   	<div class="contact-form">
+			   			<h2 >Contact</h2>
+
+		              <form class="horizontal-form" action="http://formspree.io/danielnguyen44@gmail.com" method="POST" id="contact-form">
+		              	<div class="form-group">
+		              		<input type="text" class="wide" id="First" name="first" placeholder="First Name" data-validate="required">
+		          		</div>
+		          		<div class="form-group">
+		          			<input type="text" class="wide" id="Last" name="last" placeholder="Last Name" data-validate="required">
+		          		</div>
+		          		<div class="form-group">
+		              		<input type="text" class="wide" id="Company" name="company" placeholder="Company">
+		          		</div>
+		          		<div class="form-group">
+		              		<input type="text" class="wide" id="Email" name="_replyto" data-validate="required,email,max(100)"placeholder="Example@Provider.com">
+		          		</div>
+		          		<div class="form-group">
+		          			<textarea class="wide" rows="6" id="Message" name="content" placeholder="Type your message here." form="contact-form" data-validate="required"></textarea>
+		          		</div>
+		          		<input class="hidden" name="_subject" value="Website Contact">
+		          		<input class="hidden" type="text" name="_gotcha"/>
+		          		<input class="hidden" name="_next" value="redirect.html"/>
+		          		<button class="submit" value="Send">Send</button>
+		              </form>
+		        </div>
+		</div>
+		
 		<% include templates/footer.ejs%>
 		
 	</main> <!-- cd-main-content -->
