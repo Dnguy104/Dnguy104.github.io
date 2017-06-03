@@ -33,12 +33,50 @@
 
 <!-- icon links -->
 <style>
+@font-face {
+    font-family: ostrich;
+    src: url("/stylesheets/OstrichSans-Heavy.otf") format("opentype");
+}
 
+@font-face {
+    font-family: ostrichm;
+    src: url("/stylesheets/OstrichSans-Medium.otf") format("opentype");
+}
+
+.circular--landscape img{
+    position: relative;
+    width:40%;
+        margin-right: 15px;
+    float:left;
+
+}
+
+
+.bigbio {
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.bio p {
+    margin: 0;
+    padding: 0;
+}
+
+.bio h2 {
+    font-family: "ostrich";
+    font-size: 4em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 10px;
+}
 
 .navbar-fixed-top.scrolled {
   background-color: #f7f6f2 !important;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
-  transition: background-color 200ms linear;
+  max-width:100%;
+  transition: all 400ms linear;
 }
 
 .navbar-fixed-top.scrolled .navbar-toggle {
@@ -55,6 +93,8 @@
 
 .navbar-fixed-top .navbar-right li:hover { 
     background-color:rgba(255, 255, 255, 0.1);
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+    transition: all 0.4s ease;
 }
 
 .navbar-fixed-top.scrolled .navbar-right li:hover { 
@@ -68,6 +108,7 @@
 }
 
 
+
 .navbar-fixed-top.scrolled .navbar-toggle:hover {
     background-color: #aaaaaa;
     transition: background-color 200ms linear;
@@ -77,9 +118,11 @@
     color:black;
 }
 
+
 .navbar-fixed-top.scrolled .nav > li > a:hover,.navbar-fixed-top.scrolled .navbar-header > a:hover {
-    color:#81a6c4;
-    transition: background-color 200ms linear;
+    border-bottom-color: #439348;
+    color:#28a2ff;
+    transition: all 200ms linear;
 }
 
 .navbar-fixed-top.scrolled .nav > li > a:focus,.navbar-fixed-top.scrolled .navbar-header > a:focus {
@@ -93,36 +136,67 @@
 }
 
 
+
+.navbar-fixed-top .navbar-brand:hover {
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+    transition: all 0.4s ease;
+}
+
+.navbar-fixed-top.scrolled .navbar-brand {
+    font-size: 3em;
+    color:white;
+    bottom:-5px;
+         -webkit-transform: translateY(7px);
+  -moz-transform:  translateY(7px);
+  -ms-transform:  translateY(7px);
+  -o-transform: translateY(7px);
+  transform: translateY(7px);
+    transition: all 0.4s ease;
+}
+
+
+
+.navbar .navbar-collapse {
+    border: 0;
+    
+}
+
+
 .navbar {
     background-color: transparent;    
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+    font-family: "ostrich";
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.3);
     border: 0;
-    padding-top: 0px;
-    padding-bottom: 0px;
 
-    transition: background-color 200ms linear;
+    margin: 0 auto;
+    max-width:95%;
+    transition: all 0.4s ease;
 }
+
 
 .navbar-brand { 
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    font-size: 2em;
-    font-weight: bold;
+    font-size: 4em;
     color:  #d1d1d1;
-    transition: color 200ms linear;
+    transition: all 0.4s ease;
+     -webkit-transform: translateY(10px);
+  -moz-transform:  translateY(10px);
+  -ms-transform:  translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
 } 
+
 
 .navbar-nav > li{
 
-    font-size: 0.88em;
-    font-weight: bold;
+    font-size: 1.4em;
     
 
 }
 .navbar .nav > li > a,.navbar .navbar-header > a {
-    color:  #d1d1d1; !important
-    transition: color 200ms linear;
-}
+    color:  #f0efef; !important
 
+}
 
 html * {
   -webkit-font-smoothing: antialiased;
@@ -204,7 +278,9 @@ Modules - reusable parts of our design
         font-weight: bold;
         font-size: 2.5em;
     }
-    
+    .navbar-brand , .navbar-fixed-top.scroll .navbar-brand{ 
+            display: none;
+    } 
 
 }
 
@@ -214,12 +290,8 @@ Modules - reusable parts of our design
 }
 
 @media only screen and (max-width: 768px) {
-    .footer-text {
-        font-size: 100%;
-    }
         
-    .navbar-brand { 
-        font-size: 20px;
+    .navbar-brand , .navbar-fixed-top.scroll .navbar-brand{ 
     }         
     
     .cd-fixed-bg h2{
@@ -233,12 +305,10 @@ Modules - reusable parts of our design
 }
 
 @media only screen and (min-width: 768px) {
-        .footer-text {
-            font-size: 130%;
-        }
+
         .cd-fixed-bg h2{
             font-weight: bold;
-            font-size: 1.7em;
+            font-size: 1.3em;
         }
         .cd-fixed-bg h1 {
             font-weight: bold;
@@ -262,33 +332,46 @@ Modules - reusable parts of our design
       margin: 0; 
 }
 
+
+
 .footer-text {
+    
     padding-top: 20px;
     padding-bottom: 50px;
-    background-color: #222845;
+    background-color: #302e2d;
     text-align: center;
     z-index:3;
     color:white;
+    font-size: 100%;
+}
+
+.footer-text p{
     
+    padding-top: 100px;
 }
 
 svg{
   fill: #f2f2f2;
+
 }
 
 
 
 .links {
-    padding-top: 60px;
-    padding-bottom: 40px;
 
 }
 
-svg:hover{
-  fill: #c49f66;
-  position: relative;
-  top: -10px;
-  transition-duration:  300ms;
+svg:hover {
+    fill: #28a2ff;
+    position: relative;
+    transition: all 0.4s ease;
+    top:-7px;
+    transition-duration:  300ms;
+
+}
+
+a:hover{
+      text-decoration: none;
 }
 
 .container {
@@ -307,6 +390,7 @@ svg:hover{
 
 .container p {
     color:#4a4a4a;
+    
 }
 
 .container:after { /*clear float*/
@@ -336,19 +420,69 @@ svg:hover{
     
 }
 
+input , textarea{
+    width:500px;
+}
+
  .contact-form {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 35px;
     display: table;
     margin: 0 auto;
     color:#4a4a4a;
+    font-family: "Roboto";   
+}
+
+.contact-form input {
+    padding: 7px 0px;
+}
+
+
+#button-hold {
+    text-align: center;
+    padding: 14px 0px;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 
 .contact-form h2{
     text-align: center;
+    font-size: 45px;
+    font-family: "ostrich";
     color:#4a4a4a;
 }
 
+textarea {
+    border: none;
+    resize: vertical;
+}
+
+hr {
+      max-width: 100px;
+      border-color: #28a2ff;
+      border-width: 3px;
+      align:center;
+}
+
+#button-hold button {
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+    background-color: transparent;
+    width: 250px;
+    border: 2px solid #302e2d;
+    font-size:15px;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+
+#button-hold button:hover {
+    background-color: #302e2d; /* Green */
+    color: white;
+}
 
 </style>
 
@@ -359,10 +493,21 @@ svg:hover{
           $nav.toggleClass('scrolled', $(this).scrollTop() > 10);
         });
     });
-    
-        $(window).scroll(function(){
-        $(".cd-fixed-bg .h123").css("opacity", 1 - $(window).scrollTop() / 150);
-      });
+
+    var message = "";
+
+    $(".submit").on("click", function() {
+        message = $("#horizontal-form").serialize();
+        $.ajax({
+            url: "http://formspree.io/danielnguyen44@gmail.com", 
+            method: "POST",
+            data: {message: message},
+            dataType: "json"
+        });
+        alert('Thanks for the email, I\'ll be in touch promptly.');
+        return false;
+    });
+
 </script>
 
 
