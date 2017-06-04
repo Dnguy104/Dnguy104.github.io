@@ -7,29 +7,18 @@
 
 <!-- styles -->
 <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
-<!-- <link href="/stylesheets/style.css" rel="stylesheet">
--->
+<link href="/stylesheets/navbar.css" rel="stylesheet">
+<link href="/stylesheets/project.css" rel="stylesheet">
+
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Cabin|Open+Sans" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif" rel="stylesheet">
 
 <script src="/lib/jquery/jquery.min.js"></script>
 
 <!-- Need mroe Bootstrap features? Uncomment some lines below. -->
 <script src="/lib/bootstrap/js/bootstrap.min.js"></script>
-<!--
-<script src="js/bootstrap-transition.js"></script>
-<script src="js/bootstrap-alert.js"></script>
-<script src="js/bootstrap-modal.js"></script>
-<script src="js/bootstrap-dropdown.js"></script>
-<script src="js/bootstrap-scrollspy.js"></script>
-<script src="js/bootstrap-tab.js"></script>
-<script src="js/bootstrap-tooltip.js"></script>
-<script src="js/bootstrap-popover.js"></script>
-<script src="js/bootstrap-button.js"></script>
-<script src="js/bootstrap-collapse.js"></script>
-<script src="js/bootstrap-carousel.js"></script>
-<script src="js/bootstrap-typeahead.js"></script>
--->  
+
 
 <!-- icon links -->
 <style>
@@ -72,142 +61,7 @@
     padding-top: 10px;
 }
 
-.navbar-fixed-top.scrolled {
-  background-color: #f7f6f2 !important;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
-  max-width:100%;
-  transition: all 400ms ease;
-}
 
-.navbar-fixed-top.scrolled .navbar-toggle {
-    border-color:#aaaaaa; 
-}
-
-.navbar-fixed-top.scrolled .navbar-toggle .icon-bar {
-    background-color: #aaaaaa;
-}
-
-.navbar-fixed-top.scrolled .navbar-toggle:hover .icon-bar {
-    background-color: white;
-}
-
-.navbar-fixed-top .navbar-right li:hover { 
-    background-color:rgba(255, 255, 255, 0.1);
-    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
-    transition: all 0.4s ease;
-}
-
-.navbar-fixed-top.scrolled .navbar-right li:hover { 
-    background-color:rgba(0, 0, 0, 0.07);
-
-}
-
-.navbar-fixed-top .navbar-toggle:focus, .navbar-fixed-top.scrolled .navbar-toggle:focus, .navbar-fixed-top .navbar-toggle:hover { 
-    background-color:transparent;
-    
-}
-
-
-
-.navbar-fixed-top.scrolled .navbar-toggle:hover {
-    background-color: #aaaaaa;
-    transition: background-color 200ms linear;
-}
-
-.navbar-fixed-top.scrolled .nav > li > a,.navbar-fixed-top.scrolled .navbar-header > a, .navbar-fixed-top.scrolled .nav #contact{
-    color:black;
-}
-
-.navbar-fixed-top .nav #contact {
-    padding: 11px 15px;
-    color:  #f0efef;
-}
-
-.navbar-fixed-top .nav #contact:hover {
-    color:  white;
-}
-.navbar-fixed-top.scrolled .nav #contact:hover {
-    color:#28a2ff;
-}
-
-.navbar-fixed-top.scrolled .nav > li > a:hover,.navbar-fixed-top.scrolled .navbar-header > a:hover {
-    border-bottom-color: #439348;
-    color:#28a2ff;
-    transition: all 200ms linear;
-}
-
-.navbar-fixed-top.scrolled .nav > li > a:focus,.navbar-fixed-top.scrolled .navbar-header > a:focus {
-    outline: none;
-
-}
-
-.navbar-fixed-top .nav > li > a:focus,.navbar-fixed-top .navbar-header > a:focus {
-    outline: none;
-
-}
-
-
-
-.navbar-fixed-top .navbar-brand:hover {
-    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
-    transition: all 0.4s ease;
-}
-
-.navbar-fixed-top.scrolled .navbar-brand {
-    font-size: 3em;
-    color:white;
-         -webkit-transform: translateY(5px);
-  -moz-transform:  translateY(5px);
-  -ms-transform:  translateY(5px);
-  -o-transform: translateY(5px);
-  transform: translateY(5px);
-    transition: all 0.4s ease;
-}
-
-
-
-.navbar-fixed-top .navbar-collapse {
-    background-color: transparent;
-    border: 0;
-    transition: all 0.4s ease;
-}
-
-
-.navbar {
-    background-color: transparent;  
-    font-family: "ostrich";
-    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.3);
-    border: 0;
-
-    margin: 0 auto;
-    max-width:95%;
-    transition: all 0.4s ease;
-}
-
-
-.navbar-brand { 
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    font-size: 4em;
-    color:  #d1d1d1;
-    transition: all 0.4s ease;
-     -webkit-transform: translateY(10px);
-  -moz-transform:  translateY(10px);
-  -ms-transform:  translateY(10px);
-  -o-transform: translateY(10px);
-  transform: translateY(10px);
-} 
-
-
-.navbar-nav > li{
-
-    font-size: 1.4em;
-    
-
-}
-.navbar .nav > li > a,.navbar .navbar-header > a {
-    color:  #f0efef;
-
-}
 
 html * {
   -webkit-font-smoothing: antialiased;
@@ -263,22 +117,57 @@ Modules - reusable parts of our design
 }
 .cd-fixed-bg.cd-bg-1 {
     background-image: url("/images/1080laptop.jpg");
-}
-
-.cd-fixed-bg.cd-bg-3 {
-    background-image: url("/images/1080laptop2.jpg");
-}
-
-.cd-fixed-bg {
-    font-weight: bold;
     min-height: 100%;
+    background-attachment: fixed;
+    font-weight: bold;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     z-index: 1;
-    background-attachment: fixed;
 }
+
+.cd-fixed-bg.cd-bg-3 {
+    background-image: url("/images/code1.jpg");
+    min-height: 150px;
+    font-weight: bold;
+    position: relative;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+ {
+    font-weight: bold;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 1;
+}
+
+.cd-scrolling-bg.cd-color-4{
+      position: relative;
+      z-index: 2;
+      background-color: #f0efef;
+      margin: 0; 
+}
+
+.cd-scrolling-bg.cd-color-2, .cd-scrolling-bg.cd-color-3{
+      position: relative;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+
+      margin: 0; 
+}
+
+.cd-scrolling-bg.cd-color-1{
+    background-color: none;
+}
+
+
 
 @media only screen and (max-width: 480px) {
     .cd-fixed-bg h2{
@@ -362,27 +251,26 @@ Modules - reusable parts of our design
         }
 }
 
-.cd-scrolling-bg.cd-color-4{
-      position: relative;
-      z-index: 2;
-      background-color: #f0efef;
-      margin: 0; 
+@media (max-width: 1000px) { /*breakpoint*/
+    .container > div {
+        float: none;
+        width: 100%;
+        line-height: 1.8;
+    }
+    
 }
 
-.cd-scrolling-bg.cd-color-2, .cd-scrolling-bg.cd-color-3{
-      position: relative;
-      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-      z-index: 2;
-      background-color: #f2f2f2;
-      margin: 0; 
-}
 
+
+
+
+/* ------------- mantras and footer ------------  */
 
 
 .footer-text {
-    
+    font-family: 'Cabin', sans-serif;
     padding-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     background-color: #302e2d;
     text-align: center;
     z-index:3;
@@ -395,17 +283,17 @@ Modules - reusable parts of our design
     padding-top: 100px;
 }
 
+.footer-text h3{
+    
+    font-weight: bold;
+}
+
 svg{
   fill: #f2f2f2;
   transition: all 0.3s ease;
 
 }
 
-
-
-.links {
-
-}
 
 svg:hover {
     fill: #28a2ff;
@@ -453,30 +341,20 @@ a:hover{
 .container .header {
     color:#4a4a4a;
 }
-.container > div {
-    float: left;
-    width: 33.33%;
-
-    line-height: 1.8;
-}
 
 .container p{
     padding: 0px 7px;
 }
 
 
-@media (max-width: 1000px) { /*breakpoint*/
-    .container > div {
-        float: none;
-        width: 100%;
-        line-height: 1.8;
-    }
-    
-}
+
+/* ------------- contact form ------------  */
 
 input , textarea{
     width:80%;
     border: 0;
+    padding-left: 10px;
+    padding-left: 10px;
 }
 
  .contact-form {
@@ -487,11 +365,11 @@ input , textarea{
     display: table;
     margin: 0 auto;
     color:#4a4a4a;
-    font-family: "Roboto";   
+    font-family: 'Cabin', sans-serif;  
 }
 
 .contact-form input {
-    padding: 7px 0px;
+    padding: 7px 10px;
 }
 
 
@@ -528,23 +406,24 @@ hr {
 }
 
 #button-hold button {
-    -webkit-transition-duration: 0.2s; /* Safari */
+    -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
     background-color: transparent;
     width: 250px;
-    border: 2px solid #302e2d;
+    border: 3px solid #302e2d;
     font-size:15px;
     font-weight: bold;
     padding: 10px 0px;
 }
 
 #button-hold button:hover {
-    background-color: #302e2d; /* Green */
+    background-color: #302e2d; 
     color: white;
     
 }
 
 
+/* ------------- scroll button------------  */
 
 #section02  {
     position: absolute;

@@ -1,0 +1,137 @@
+.navbar-fixed-top.scrolled {
+  background-color: #f7f6f2 !important;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  max-width:100%;
+  transition: all 400ms ease;
+}
+
+.navbar-fixed-top.scrolled .navbar-toggle {
+    border-color:#aaaaaa; 
+}
+
+.navbar-fixed-top.scrolled .navbar-toggle .icon-bar {
+    background-color: #aaaaaa;
+}
+
+.navbar-fixed-top.scrolled .navbar-toggle:hover .icon-bar {
+    background-color: white;
+}
+
+.navbar-fixed-top .navbar-right li:hover { 
+    background-color:rgba(255, 255, 255, 0.1);
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+    transition: all 0.4s ease;
+}
+
+.navbar-fixed-top.scrolled .navbar-right li:hover { 
+    background-color:rgba(0, 0, 0, 0.07);
+
+}
+
+.navbar-fixed-top .navbar-toggle:focus, .navbar-fixed-top.scrolled .navbar-toggle:focus, .navbar-fixed-top .navbar-toggle:hover { 
+    background-color:transparent;
+    
+}
+
+
+
+.navbar-fixed-top.scrolled .navbar-toggle:hover {
+    background-color: #aaaaaa;
+    transition: background-color 200ms linear;
+}
+
+.navbar-fixed-top.scrolled .nav > li > a,.navbar-fixed-top.scrolled .navbar-header > a, .navbar-fixed-top.scrolled .nav #contact{
+    color:black;
+}
+
+.navbar-fixed-top .nav #contact {
+    padding: 11px 15px;
+    color:  #f0efef;
+}
+
+.navbar-fixed-top .nav #contact:hover {
+    color:  white;
+}
+.navbar-fixed-top.scrolled .nav #contact:hover {
+    color:#28a2ff;
+}
+
+.navbar-fixed-top.scrolled .nav > li > a:hover,.navbar-fixed-top.scrolled .navbar-header > a:hover {
+    border-bottom-color: #439348;
+    color:#28a2ff;
+    transition: all 200ms linear;
+}
+
+.navbar-fixed-top.scrolled .nav > li > a:focus,.navbar-fixed-top.scrolled .navbar-header > a:focus {
+    outline: none;
+
+}
+
+.navbar-fixed-top .nav > li > a:focus,.navbar-fixed-top .navbar-header > a:focus {
+    outline: none;
+
+}
+
+
+
+.navbar-fixed-top .navbar-brand:hover {
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.5);
+    transition: all 0.4s ease;
+}
+
+.navbar-fixed-top.scrolled .navbar-brand {
+    font-size: 3em;
+    color:white;
+         -webkit-transform: translateY(5px);
+  -moz-transform:  translateY(5px);
+  -ms-transform:  translateY(5px);
+  -o-transform: translateY(5px);
+  transform: translateY(5px);
+    transition: all 0.4s ease;
+}
+
+
+
+.navbar-fixed-top .navbar-collapse {
+    background-color: transparent;
+    border: 0;
+    transition: all 0.4s ease;
+}
+
+
+.navbar {
+    background-color: transparent;  
+    font-family: "ostrich";
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.3);
+    border: 0;
+
+    margin: 0 auto;
+    max-width:95%;
+    transition: all 0.4s ease;
+}
+
+
+.navbar-brand { 
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 4em;
+    color:  #d1d1d1;
+    transition: all 0.4s ease;
+     -webkit-transform: translateY(10px);
+  -moz-transform:  translateY(10px);
+  -ms-transform:  translateY(10px);
+  -o-transform: translateY(10px);
+  transform: translateY(10px);
+} 
+
+
+.navbar-nav > li{
+
+    font-size: 1.4em;
+    
+
+}
+.navbar .nav > li > a,.navbar .navbar-header > a {
+    color:  #f0efef;
+
+}
+
