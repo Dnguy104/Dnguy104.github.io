@@ -46,8 +46,8 @@
 .circular--landscape img{
     position: relative;
     width:40%;
-        margin-right: 15px;
-    float:left;
+      float:left;
+      margin-right: 15px;
 
 }
 
@@ -76,7 +76,7 @@
   background-color: #f7f6f2 !important;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
   max-width:100%;
-  transition: all 400ms linear;
+  transition: all 400ms ease;
 }
 
 .navbar-fixed-top.scrolled .navbar-toggle {
@@ -102,7 +102,7 @@
 
 }
 
-.navbar-fixed-top .navbar-toggle:focus, .navbar-fixed-top.scrolled .navbar-toggle:focus { 
+.navbar-fixed-top .navbar-toggle:focus, .navbar-fixed-top.scrolled .navbar-toggle:focus, .navbar-fixed-top .navbar-toggle:hover { 
     background-color:transparent;
     
 }
@@ -114,10 +114,21 @@
     transition: background-color 200ms linear;
 }
 
-.navbar-fixed-top.scrolled .nav > li > a,.navbar-fixed-top.scrolled .navbar-header > a {
+.navbar-fixed-top.scrolled .nav > li > a,.navbar-fixed-top.scrolled .navbar-header > a, .navbar-fixed-top.scrolled .nav #contact{
     color:black;
 }
 
+.navbar-fixed-top .nav #contact {
+    padding: 11px 15px;
+    color:  #f0efef;
+}
+
+.navbar-fixed-top .nav #contact:hover {
+    color:  white;
+}
+.navbar-fixed-top.scrolled .nav #contact:hover {
+    color:#28a2ff;
+}
 
 .navbar-fixed-top.scrolled .nav > li > a:hover,.navbar-fixed-top.scrolled .navbar-header > a:hover {
     border-bottom-color: #439348;
@@ -145,25 +156,25 @@
 .navbar-fixed-top.scrolled .navbar-brand {
     font-size: 3em;
     color:white;
-    bottom:-5px;
-         -webkit-transform: translateY(7px);
-  -moz-transform:  translateY(7px);
-  -ms-transform:  translateY(7px);
-  -o-transform: translateY(7px);
-  transform: translateY(7px);
+         -webkit-transform: translateY(5px);
+  -moz-transform:  translateY(5px);
+  -ms-transform:  translateY(5px);
+  -o-transform: translateY(5px);
+  transform: translateY(5px);
     transition: all 0.4s ease;
 }
 
 
 
-.navbar .navbar-collapse {
+.navbar-fixed-top .navbar-collapse {
+    background-color: transparent;
     border: 0;
-    
+    transition: all 0.4s ease;
 }
 
 
 .navbar {
-    background-color: transparent;    
+    background-color: transparent;  
     font-family: "ostrich";
     box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.3);
     border: 0;
@@ -194,7 +205,7 @@
 
 }
 .navbar .nav > li > a,.navbar .navbar-header > a {
-    color:  #f0efef; !important
+    color:  #f0efef;
 
 }
 
@@ -276,11 +287,31 @@ Modules - reusable parts of our design
     }
     .cd-fixed-bg h1 {
         font-weight: bold;
-        font-size: 2.5em;
+        font-size:2.5em; 
     }
     .navbar-brand , .navbar-fixed-top.scroll .navbar-brand{ 
             display: none;
+            transition: display 0.5s linear;
     } 
+    #section02  {
+        display: none;
+    }
+    
+    .circular--landscape img{
+        width: 70%;
+        margin: auto;
+        float: none;
+        vertical-align: top;
+        transform: translate(22%, 3%);
+         
+    }
+    
+    .circular--landscape {
+        width: 100%;
+        margin: 0 auto;
+          float:none;
+    }
+
 
 }
 
@@ -294,6 +325,14 @@ Modules - reusable parts of our design
     .navbar-brand , .navbar-fixed-top.scroll .navbar-brand{ 
     }         
     
+    .navbar-fixed-top .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .navbar-fixed-top.scrolled .navbar-collapse {
+    background-color: #f7f6f2
+    }
+    
     .cd-fixed-bg h2{
     font-weight: bold;
     font-size: 1.3em;
@@ -302,11 +341,17 @@ Modules - reusable parts of our design
         font-weight: bold;
         font-size: 4.5em;
     }
+    
+    .contact-form {
+
+         width: 100% !important;
+    }
 }
 
 @media only screen and (min-width: 768px) {
 
         .cd-fixed-bg h2{
+            word-spacing: 0.2em;
             font-weight: bold;
             font-size: 1.3em;
         }
@@ -352,6 +397,7 @@ Modules - reusable parts of our design
 
 svg{
   fill: #f2f2f2;
+  transition: all 0.3s ease;
 
 }
 
@@ -364,9 +410,7 @@ svg{
 svg:hover {
     fill: #28a2ff;
     position: relative;
-    transition: all 0.4s ease;
-    top:-7px;
-    transition-duration:  300ms;
+    transform: translate(0px, -5px);
 
 }
 
@@ -409,6 +453,16 @@ a:hover{
 .container .header {
     color:#4a4a4a;
 }
+.container > div {
+    float: left;
+    width: 33.33%;
+
+    line-height: 1.8;
+}
+
+.container p{
+    padding: 0px 7px;
+}
 
 
 @media (max-width: 1000px) { /*breakpoint*/
@@ -421,12 +475,15 @@ a:hover{
 }
 
 input , textarea{
-    width:500px;
+    width:80%;
+    border: 0;
 }
 
  .contact-form {
     padding-top: 20px;
     padding-bottom: 35px;
+    text-align: center;
+    width: 50%;
     display: table;
     margin: 0 auto;
     color:#4a4a4a;
@@ -439,9 +496,12 @@ input , textarea{
 
 
 #button-hold {
-    text-align: center;
+
     padding: 14px 0px;
+        font-size: 25px;
 }
+
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -450,7 +510,6 @@ button:focus {
 }
 
 .contact-form h2{
-    text-align: center;
     font-size: 45px;
     font-family: "ostrich";
     color:#4a4a4a;
@@ -482,6 +541,51 @@ hr {
 #button-hold button:hover {
     background-color: #302e2d; /* Green */
     color: white;
+    
+}
+
+
+
+#section02  {
+    position: absolute;
+    left: 50%;
+    top: 82%;
+    
+}
+
+
+
+#section02:hover button {
+    transform: translate(0px, -5px);
+    background-color: transparent;
+    border: 2px solid transparent;
+}
+
+
+#section02 button {
+    position: absolute;
+    transition: all 400ms ease;
+    width: 60px;
+    height: 60px;
+    margin-left: -30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+#section02 button::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin: -15px 0 0 -10px;
+    border-left: 2px solid rgba(0, 0, 0, 0.2);;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
 }
 
 </style>
@@ -489,10 +593,25 @@ hr {
 <script>
     $(function () {
       $(document).scroll(function () {
-          var $nav = $(".navbar-fixed-top");
-          $nav.toggleClass('scrolled', $(this).scrollTop() > 10);
+            var $nav = $(".navbar-fixed-top");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > 10);
+            
         });
     });
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() < 10) {
+            $('#section02').fadeIn();
+        } else {
+            $('#section02').fadeOut();
+        }
+    });
+    
+    
+    $("#press").click(function(){
+        $("html, body").animate({ scrollTop: 1000 }, 600);
+         return false;
+    }); 
 
     var message = "";
 
@@ -507,6 +626,7 @@ hr {
         alert('Thanks for the email, I\'ll be in touch promptly.');
         return false;
     });
+    
 
 </script>
 
