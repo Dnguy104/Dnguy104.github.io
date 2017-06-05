@@ -18,11 +18,63 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/project">Projects</a></li>
                     <li><a href="/images/CV.pdf">Resume</a></li>
-                    <li id="contact"  onclick="$('html, body').animate({scrollTop: ( $('.cd-bg-1')[0].scrollHeight + $('.cd-color-2')[0].scrollHeight + $('.cd-bg-3')[0].scrollHeight + $('.cd-color-1')[0].scrollHeight) - ( $('.navbar')[0].offsetHeight)}, 1000); ">Contact Me!</li>
-
+                    <li><a href="#myModal" data-toggle="modal">CONTACT ME!</a></li>
+                    
+                    <!--<li id="contact"  onclick="$('html, body').animate({scrollTop: ( $('.cd-bg-1')[0].scrollHeight + $('.cd-color-2')[0].scrollHeight + $('.cd-bg-3')[0].scrollHeight + $('.cd-color-1')[0].scrollHeight) - ( $('.navbar')[0].offsetHeight)}, 1000); ">Contact Me!</li>
+                    -->
                 </ul>
             </div>
     
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2 >Contact</h2>
+
+            </div>
+            
+            <div class="modal-body">
+                <div class="contact-form">
+
+                      <form id="horizontal-form" method="POST" id="contact-form">
+                            <div class="form-group">
+                                <input type="text" class="wide" id="First" name="first" placeholder=" First Name" data-validate="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="wide" id="Last" name="last" placeholder=" Last Name" data-validate="required">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="wide" id="Email" name="_replyto" data-validate="required,email,max(100)"placeholder=" Email address">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="wide" rows="10" id="Message" name="content" placeholder="Type your message here." form="contact-form" data-validate="required"></textarea>
+                            </div>
+                            <input class="hidden" type="text" name="_gotcha"/>
+                            <div id="button-hold">
+                                <button class="submit" value="Send">Send</button>
+                            </div>
+                      </form>
+                      
+                      
+                      
+                </div>
+            </div>
+            
+            <!--
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Close</button>
+            </div>
+            -->
+        </div>
+  
     </div>
 </div>
 

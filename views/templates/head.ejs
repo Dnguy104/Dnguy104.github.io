@@ -21,6 +21,8 @@
 
 
 <!-- icon links -->
+
+
 <style>
 @font-face {
     font-family: ostrich;
@@ -32,33 +34,29 @@
     src: url("/stylesheets/OstrichSans-Medium.otf") format("opentype");
 }
 
-.circular--landscape img{
+.circular--landscape {
     position: relative;
-    width:40%;
-      float:left;
-      margin-right: 15px;
-
 }
 
 
 .bigbio {
     position: relative;
     overflow: hidden;
-}
-
-
-
-.bio p {
-    margin: 0;
-    padding: 0;
+    line-height: 1.8;
 }
 
 .bio h2 {
     font-family: "ostrich";
-    font-size: 4em;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    padding-top: 10px;
+    margin:0;
+}
+.bio p {
+    font-family: "cabin";
+    font-size: 1.2em;
+}
+
+.clear
+{
+    clear: both;
 }
 
 
@@ -72,13 +70,16 @@ html * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  
 }
+
 
 
 
 body, html {
   height: 100%;
-
+    margin: 0;
+  
 }
 
 /* -------------------------------- 
@@ -129,7 +130,7 @@ Modules - reusable parts of our design
 
 .cd-fixed-bg.cd-bg-3 {
     background-image: url("/images/code1.jpg");
-    min-height: 150px;
+    min-height: 30%;
     font-weight: bold;
     position: relative;
     background-size: 100% 100%;
@@ -165,6 +166,7 @@ Modules - reusable parts of our design
 
 .cd-scrolling-bg.cd-color-1{
     background-color: none;
+    position: relative;
 }
 
 
@@ -185,23 +187,6 @@ Modules - reusable parts of our design
     #section02  {
         display: none;
     }
-    
-    .circular--landscape img{
-        width: 70%;
-        margin: auto;
-        float: none;
-        vertical-align: top;
-        transform: translate(22%, 3%);
-         
-    }
-    
-    .circular--landscape {
-        width: 100%;
-        margin: 0 auto;
-          float:none;
-    }
-
-
 }
 
 
@@ -235,6 +220,53 @@ Modules - reusable parts of our design
 
          width: 100% !important;
     }
+    
+    
+    .circular--landscape {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .circular--landscape img{
+            text-align: center;
+            width:50%;
+            display : block;
+            margin : 10px auto;
+            margin-top: 30px;
+            box-shadow: 8px 8px 10px #aaa;
+    }
+        
+    #bio-wrap {
+            margin: 50px 20px;
+
+        }
+        
+    .bio {
+        padding-top: 10px;
+    } 
+        
+    .bio h2 {
+            font-size: 3.5em;
+            text-align: center;
+        }
+    
+    .footer-text {
+        font-family: 'Cabin', sans-serif;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        background-color: #302e2d;
+        text-align: center;
+        z-index:3;
+        color:white;
+        font-size: 100%;
+    }
+
+    .footer-text p{
+        
+        padding-top: 50px;
+    }
+
+    
 }
 
 @media only screen and (min-width: 768px) {
@@ -247,8 +279,59 @@ Modules - reusable parts of our design
         .cd-fixed-bg h1 {
             font-weight: bold;
             font-size: 6em;
-            
         }
+        
+        
+        .circular--landscape img{
+            margin-top: 5px;
+            margin-right: 30px;
+            max-width: 400px;
+
+            float:left;
+            box-shadow: 8px 8px 10px #aaa;
+        }
+
+        
+        #bio-wrap {
+            margin: 50px 50px;
+
+        }
+        
+        .bio {
+            text-align: left;            
+        }
+        
+        .bio h2 {
+            font-size: 5.5em;
+        }
+
+        .footer-links {
+            float:left;
+        }
+
+        .footer-text {
+            font-family: 'Cabin', sans-serif;
+            overflow: hidden;
+            background-color: #302e2d;
+            text-align: center;
+            z-index:3;
+            color:white;
+            font-size: 100%;
+            padding: 30px 30px;
+        }
+
+        .footer-text p{
+            text-align: right; 
+            padding-top: 14px;
+        }
+        
+        .container > div {
+            float: left;
+            width: 33.33%;
+            line-height: 1.8;
+        }
+
+
 }
 
 @media (max-width: 1000px) { /*breakpoint*/
@@ -261,32 +344,8 @@ Modules - reusable parts of our design
 }
 
 
-
-
-
 /* ------------- mantras and footer ------------  */
 
-
-.footer-text {
-    font-family: 'Cabin', sans-serif;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    background-color: #302e2d;
-    text-align: center;
-    z-index:3;
-    color:white;
-    font-size: 100%;
-}
-
-.footer-text p{
-    
-    padding-top: 100px;
-}
-
-.footer-text h3{
-    
-    font-weight: bold;
-}
 
 svg{
   fill: #f2f2f2;
@@ -331,12 +390,7 @@ a:hover{
     display: table;
     clear: both;
 }
-.container > div {
-    float: left;
-    width: 33.33%;
 
-    line-height: 1.8;
-}
 
 .container .header {
     color:#4a4a4a;
@@ -348,79 +402,7 @@ a:hover{
 
 
 
-/* ------------- contact form ------------  */
 
-input , textarea{
-    width:80%;
-    border: 0;
-    padding-left: 10px;
-    padding-left: 10px;
-}
-
- .contact-form {
-    padding-top: 20px;
-    padding-bottom: 35px;
-    text-align: center;
-    width: 50%;
-    display: table;
-    margin: 0 auto;
-    color:#4a4a4a;
-    font-family: 'Cabin', sans-serif;  
-}
-
-.contact-form input {
-    padding: 7px 10px;
-}
-
-
-#button-hold {
-
-    padding: 14px 0px;
-        font-size: 25px;
-}
-
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-}
-
-.contact-form h2{
-    font-size: 45px;
-    font-family: "ostrich";
-    color:#4a4a4a;
-}
-
-textarea {
-    border: none;
-    resize: vertical;
-}
-
-hr {
-      max-width: 100px;
-      border-color: #28a2ff;
-      border-width: 3px;
-      align:center;
-}
-
-#button-hold button {
-    -webkit-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-    background-color: transparent;
-    width: 250px;
-    border: 3px solid #302e2d;
-    font-size:15px;
-    font-weight: bold;
-    padding: 10px 0px;
-}
-
-#button-hold button:hover {
-    background-color: #302e2d; 
-    color: white;
-    
-}
 
 
 /* ------------- scroll button------------  */
@@ -467,6 +449,7 @@ hr {
     box-sizing: border-box;
 }
 
+
 </style>
 
 <script>
@@ -505,6 +488,8 @@ hr {
         alert('Thanks for the email, I\'ll be in touch promptly.');
         return false;
     });
+    
+    
     
 
 </script>
