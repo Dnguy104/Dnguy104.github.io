@@ -1,9 +1,9 @@
 #tab-wrap {
-    margin: 100px auto;
+    margin: 100px 20px;
     font-family: "cabin";
 }
 
-main {
+#inner-wrap {
   min-width: 320px;
   max-width: 1000px;
 
@@ -11,9 +11,27 @@ main {
   background: white;
 }
 
+@media screen and (max-width: 768px) {
+  #inner-wrap label {
+    padding: 10px 15px;
+    font-size: .7em;
+  }
+  
+}
+
+
+@media screen and (min-width: 768px) {
+  #inner-wrap label {
+    padding: 20px 25px;
+
+  }
+  
+}
+
+
 section {
     display: none;
-    padding: 20px 30px;
+    padding: 50px 30px;
     border: 1px solid #ddd;
 }
 
@@ -22,15 +40,14 @@ section p{
     animation: fadeEffect 1s;
 }
 
-input {
+#inner-wrap input {
   display: none;
 }
 
-label {
+#inner-wrap label {
   display: inline-block;
   margin: 0 -3px -1px 0;
-  padding: 20px 25px;
-  font-weight: 600;
+  font-weight: bold;
   text-align: center;
   color: #bbb;
   border: 1px solid rgba(0,0,0,0.15);
@@ -39,28 +56,21 @@ label {
 
 
 
-label:before {
-  font-family: fontawesome;
-  font-weight: normal;
-  margin-right: 10px;
-}
 
-
-
-label:hover {
+#inner-wrap label:hover {
   color: #888;
   cursor: pointer;
 }
 
-input:checked + label {
+#inner-wrap input:checked + label {
   color: #555;
   border: 1px solid #ddd;
   border-top: 2px solid #28a2ff;;
   border-bottom: 1px solid #fff;
   background-color: rgba(255,255,255,0.7);
-  -webkit-animation: fadeEffect 500ms;
-    animation: fadeEffect 500ms;
 }
+
+
 
 #tab1:checked ~ #content1,
 #tab2:checked ~ #content2,
