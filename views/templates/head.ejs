@@ -120,7 +120,7 @@ Modules - reusable parts of our design
   color: white;
 }
 
-.cd-fixed-bg .h12 {
+.h12 {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -139,6 +139,23 @@ Modules - reusable parts of our design
   color: white;
 }
 
+.phead{
+    position: absolute;
+    bottom: auto;
+  right: auto;
+  -webkit-transform: translateY(-110%);
+  -moz-transform:  translateY(-110%);
+  -ms-transform:  translateY(-110%);
+  -o-transform: translateY(-110%);
+  transform:  translateY(-110%);
+  font-family: "ostrichm";
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
 .cd-fixed-bg.cd-bg-1 {
     background-image: url("/images/1080laptop.jpg");
     min-height: 100%;
@@ -150,9 +167,14 @@ Modules - reusable parts of our design
     z-index: 1;
 }
 
+.project-header{
+    height: 30%;
+}
+
 .cd-fixed-bg.cd-bg-3 {
     background-image: url("/images/code1.jpg");
-    min-height: 30%;
+    height:100%;
+    width: 100%;
     font-weight: bold;
     position: relative;
     background-size: 100% 100%;
@@ -160,6 +182,7 @@ Modules - reusable parts of our design
     background-position: center center;
     z-index: 1;
     filter: contrast(300%);
+    filter: brightness(70%);
 }
 
 .cd-fixed-bg.quote {
@@ -383,7 +406,7 @@ td a:hover {
               font-size: 2em;
         }
     
-    .cd-fixed-bg .h12 h1 {
+    .cd-fixed-bg .h12 h1, .phead h1 {
             font-size: 3.7em;
         }
     
@@ -401,7 +424,7 @@ td a:hover {
             font-size: 7em;
         }
         
-        .cd-fixed-bg .h12 h1 {
+        .cd-fixed-bg .h12 h1, .phead h1{
             font-size: 5em;
         }
         
