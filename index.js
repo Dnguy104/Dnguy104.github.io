@@ -34,7 +34,7 @@
 // console.log('3000 is the magic port');
 
 var express = require('express');
-
+var debug = require('debug')('node-app-template');
 var engine = require('ejs-locals');
 var path = require('path');
 var logger = require('morgan');
@@ -96,5 +96,8 @@ app.use(function(err, req, res, next) {
     });
 });
 
+app.set('port', process.env.PORT || 3000);
 
-module.exports = app;
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+});

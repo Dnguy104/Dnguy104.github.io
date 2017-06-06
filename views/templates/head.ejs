@@ -30,6 +30,11 @@
 }
 
 @font-face {
+    font-family: hhh;
+    src: url("/stylesheets/HelveticaNeue.ttf") format("opentype");
+}
+
+@font-face {
     font-family: ostrichm;
     src: url("/stylesheets/OstrichSans-Medium.otf") format("opentype");
 }
@@ -46,18 +51,17 @@
 }
 
 .bio h2 {
-    font-family: "ostrich";
+    font-family: "ostrichm";
     margin:0;
 }
 .bio p {
-    font-family: "cabin";
+    font-family: "hhh";
     font-size: 1.2em;
+    line-height: 2;
+    font-weight: bold;
 }
 
-.clear
-{
-    clear: both;
-}
+
 
 
 
@@ -95,7 +99,6 @@ Modules - reusable parts of our design
   width: 100%;
   position: relative;
   z-index: 1;
-  font-family: 'Droid Serif', serif;
 }
 
 
@@ -110,7 +113,7 @@ Modules - reusable parts of our design
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-
+  font-family: 'hhh';
   width: 100%;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -140,7 +143,6 @@ Modules - reusable parts of our design
     background-image: url("/images/1080laptop.jpg");
     min-height: 100%;
     background-attachment: fixed;
-    font-weight: bold;
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -162,7 +164,7 @@ Modules - reusable parts of our design
 
 .cd-fixed-bg.quote {
     background-image: url("/images/rock.jpg");
-    min-height: 65%;
+    min-height: 80%;
     background-attachment: fixed;
     font-weight: bold;
     position: relative;
@@ -194,11 +196,12 @@ Modules - reusable parts of our design
 
 .cd-scrolling-bg.skills{
       position: relative;
-      z-index: 2;
+      z-index: 6;
       background-color: white;
-      margin: 50px 50px; 
+
       text-align: center;
-      background-color: rgba(255,0,255,0.1);
+      background-color: rgba(0,0,1,0.05);
+      padding: 50px 0;      
 }
 .cd-scrolling-bg.skills h2{
       font-family: "cabin";
@@ -216,24 +219,25 @@ Modules - reusable parts of our design
 .cd-scrolling-bg.info{
       position: relative;
       z-index: 2;
-      background-color: rgba(0,255,255,0.1);
-      margin: 50px 50px; 
-      height:400px;
+      background-color: black;
+      color: white;
+      height:800px;
 
 }
 
 .cd-scrolling-bg.info h2{
-    font-family: 'ostrich';
-    font-size: 5.5em;
+    font-family: 'ostrichm';
     text-align: center;
 }
 
-.cd-scrolling-bg.cd-color-2, .cd-scrolling-bg.cd-color-3{
+.cd-scrolling-bg.cd-color-2{
       position: relative;
-      box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 -25px 50px rgba(0, 0, 0, 0.2);
       z-index: 2;
-
       margin: 0; 
+      background-color: black;
+      color: white;
+      padding-bottom: 100px;
 }
 
 .cd-scrolling-bg.cd-color-1{
@@ -245,24 +249,34 @@ Modules - reusable parts of our design
 
 @media only screen and (max-width: 480px) {
     .cd-fixed-bg .h123 h2{
-    font-weight: bold;
-    font-size: 1.5em;
+        font-weight: bold;
+    font-size: 1.1em;
     }
     .cd-fixed-bg .h123 h1 {
-        font-weight: bold;
-        font-size:2.5em; 
+        font-size:4em; 
+
     }
-    .navbar-brand , .navbar-fixed-top.scroll .navbar-brand{ 
-            font-size: 2.5em;
-    } 
-    #section02  {
-        display: none;
+    .cd-scrolling-bg.info{
+          margin: 50px 15px; 
+    }
+    
+    #section02 {
+        display: none !important;
     }
 }
 
 
 @media only screen and (min-width: 480px) {
-    
+    .cd-fixed-bg .h123 h2{
+        font-weight: bold;
+    font-size: 1.3em;
+    }
+    .cd-fixed-bg .h123 h1 {
+        font-size: 4.5em;
+    }
+    .cd-scrolling-bg.info{
+        padding: 100px 50px; 
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -271,21 +285,13 @@ Modules - reusable parts of our design
     }         
     
     .navbar-fixed-top .navbar-collapse {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.45);
     }
     
     .navbar-fixed-top.scrolled .navbar-collapse {
     background-color: #f7f6f2
     }
-    
-    .cd-fixed-bg .h123 h2{
-    font-weight: bold;
-    font-size: 1.3em;
-    }
-    .cd-fixed-bg .h123 h1 {
-        font-weight: bold;
-        font-size: 4.5em;
-    }
+
     
     .contact-form {
 
@@ -308,7 +314,8 @@ Modules - reusable parts of our design
     }
         
     #bio-wrap {
-            margin: 50px 20px;
+            margin: 0 20px;
+            margin-top: 50px;
 
         }
         
@@ -320,12 +327,16 @@ Modules - reusable parts of our design
             font-size: 3.5em;
             text-align: center;
         }
+        
+    .cd-scrolling-bg.info h2{
+        font-size: 3.5em;
+    }    
     
     .footer-text {
         font-family: 'Cabin', sans-serif;
         padding-top: 20px;
         padding-bottom: 30px;
-        background-color: #302e2d;
+        background-color: #303235;
         text-align: center;
         z-index:3;
         color:white;
@@ -341,6 +352,10 @@ Modules - reusable parts of our design
               font-size: 2em;
         }
     
+    .cd-fixed-bg .h12 h1 {
+            font-size: 3.7em;
+        }
+    
 }
 
 @media only screen and (min-width: 768px) {
@@ -348,15 +363,15 @@ Modules - reusable parts of our design
         .cd-fixed-bg .h123 h2{
             word-spacing: 0.2em;
             font-weight: bold;
-            font-size: 1.3em;
+            font-size: 1.5em;
         }
-        .cd-fixed-bg .h123 h1 {
-            font-weight: bold;
-            font-size: 6em;
+        
+        .cd-fixed-bg .h123 h1{
+            font-size: 7em;
         }
         
         .cd-fixed-bg .h12 h1 {
-            font-size: 3.7em;
+            font-size: 5em;
         }
         
         
@@ -366,12 +381,13 @@ Modules - reusable parts of our design
             max-width: 400px;
 
             float:left;
-            box-shadow: 8px 8px 10px #aaa;
+            box-shadow: 8px 8px 10px rgba(255,255,255,0.3);
         }
 
         
         #bio-wrap {
-            margin: 50px 50px;
+            margin: 0 50px;
+            margin-top: 100px;
 
         }
         
@@ -390,7 +406,7 @@ Modules - reusable parts of our design
         .footer-text {
             font-family: 'Cabin', sans-serif;
             overflow: hidden;
-            background-color: #302e2d;
+            background-color: #303235;
             text-align: center;
             z-index:3;
             color:white;
@@ -400,7 +416,7 @@ Modules - reusable parts of our design
 
         .footer-text p{
             text-align: right; 
-            padding-top: 14px;
+            padding-top: 15px;
         }
         
         .container > div {
@@ -411,6 +427,10 @@ Modules - reusable parts of our design
         
         .cd-scrolling-bg.skills h2{ 
               font-size: 2.8em;
+        }
+        
+        .cd-scrolling-bg.info h2{
+            font-size: 5.5em;
         }
 
 }
@@ -428,10 +448,14 @@ Modules - reusable parts of our design
 /* ------------- mantras and footer ------------  */
 
 
-svg{
+svg {
   fill: #f2f2f2;
   transition: all 0.3s ease;
 
+}
+
+.heart {
+    fill: #28a2ff;
 }
 
 
@@ -510,8 +534,8 @@ a:hover{
     width: 60px;
     height: 60px;
     margin-left: -30px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.7);
     border-radius: 100%;
     box-sizing: border-box;
 }
@@ -523,8 +547,8 @@ a:hover{
     width: 20px;
     height: 20px;
     margin: -15px 0 0 -10px;
-    border-left: 2px solid rgba(0, 0, 0, 0.2);;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);;
+    border-left: 3px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.4);
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
     box-sizing: border-box;
