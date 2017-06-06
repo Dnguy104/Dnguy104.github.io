@@ -158,8 +158,8 @@ Modules - reusable parts of our design
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
-
     z-index: 1;
+    filter: contrast(300%);
 }
 
 .cd-fixed-bg.quote {
@@ -221,13 +221,45 @@ Modules - reusable parts of our design
       z-index: 2;
       background-color: black;
       color: white;
-      height:800px;
-
+      
 }
 
 .cd-scrolling-bg.info h2{
     font-family: 'ostrichm';
     text-align: center;
+}
+
+
+table {
+    border-collapse: collapse;
+    position: relative;
+    max-width: 800px; 
+    width: 100%;
+    margin:0 auto;
+    
+}
+
+table tr {
+    background-color: rgba(255,255,255,0.1);
+}
+
+
+td {
+    padding: 5px 0;
+    text-align: center;
+}
+
+
+tr:nth-child(even) {
+    background-color: rgba(255,255,255,0.4);
+}
+
+td a {
+    color: white;
+}
+
+td a:hover {
+    color: #28a2ff;
 }
 
 .cd-scrolling-bg.cd-color-2{
@@ -257,7 +289,7 @@ Modules - reusable parts of our design
 
     }
     .cd-scrolling-bg.info{
-          margin: 50px 15px; 
+          padding: 50px 15px; 
     }
     
     #section02 {
@@ -310,7 +342,6 @@ Modules - reusable parts of our design
             display : block;
             margin : 10px auto;
             margin-top: 30px;
-            box-shadow: 8px 8px 10px #aaa;
     }
         
     #bio-wrap {
@@ -345,7 +376,7 @@ Modules - reusable parts of our design
 
     .footer-text p{
         
-        padding-top: 50px;
+        padding-top: 30px;
     }
 
     .cd-scrolling-bg.skills h2{ 
@@ -381,7 +412,6 @@ Modules - reusable parts of our design
             max-width: 400px;
 
             float:left;
-            box-shadow: 8px 8px 10px rgba(255,255,255,0.3);
         }
 
         
@@ -411,12 +441,14 @@ Modules - reusable parts of our design
             z-index:3;
             color:white;
             font-size: 100%;
-            padding: 30px 30px;
+            padding: 0 30px;
+            padding-top: 20px;
+            padding-bottom: 15px;
         }
 
         .footer-text p{
             text-align: right; 
-            padding-top: 15px;
+            padding-top: 5px;
         }
         
         .container > div {
@@ -447,9 +479,8 @@ Modules - reusable parts of our design
 
 /* ------------- mantras and footer ------------  */
 
-
-svg {
-  fill: #f2f2f2;
+ svg{
+  fill: rgba(255,255,255,0.8);
   transition: all 0.3s ease;
 
 }
@@ -459,7 +490,7 @@ svg {
 }
 
 
-svg:hover {
+.links svg:hover, .footer-links svg:hover {
     fill: #28a2ff;
     position: relative;
     transform: translate(0px, -5px);
