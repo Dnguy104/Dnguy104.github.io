@@ -622,7 +622,6 @@ a:hover{
 </style>
 
 <script type="text/javascript">
-        
     $(function () {
       $(document).scroll(function () {
             var $nav = $(".navbar-fixed-top");
@@ -688,7 +687,10 @@ a:hover{
     
     $(document).ready(function() {
         $(window).on('load', function () {
-                $('#spinner-wrapper').fadeOut(1000);
+            
+            setTimeout(function() 
+            { $('#spinner-wrapper').fadeOut(1000); }, 2000);
+
         });
     });
     
