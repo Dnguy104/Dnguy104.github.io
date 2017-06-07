@@ -71,11 +71,6 @@
 .navbar-fixed-top.scrolled .navbar-brand {
     font-size: 3em;
     color:white;
-         -webkit-transform: translateY(5px);
-  -moz-transform:  translateY(5px);
-  -ms-transform:  translateY(5px);
-  -o-transform: translateY(5px);
-  transform: translateY(5px);
     transition: all 0.4s ease;
 }
 
@@ -106,11 +101,6 @@
     color:  #d1d1d1;
     margin: auto 0;
     transition: all 0.4s ease;
-     -webkit-transform: translateY(10px);
-  -moz-transform:  translateY(10px);
-  -ms-transform:  translateY(10px);
-  -o-transform: translateY(10px);
-  transform: translateY(10px);
 } 
 
 @media only screen and (max-width: 480px) {
@@ -129,6 +119,24 @@
         -ms-transform:  translateY(4px);
         -o-transform: translateY(4px);
         transform: translateY(4px);
+    }
+}
+
+@media only screen and (min-width: 480px) {
+      .navbar-brand { 
+
+          -webkit-transform: translateY(10px);
+          -moz-transform:  translateY(10px);
+          -ms-transform:  translateY(10px);
+          -o-transform: translateY(10px);
+            transform: translateY(10px);
+      }
+      .navbar-fixed-top.scrolled .navbar-brand { 
+        -webkit-transform: translateY(5px);
+        -moz-transform:  translateY(5px);
+        -ms-transform:  translateY(5px);
+        -o-transform: translateY(5px);
+        transform: translateY(5px);
     }
 }
 

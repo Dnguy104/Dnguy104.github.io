@@ -9,6 +9,7 @@
 <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
 <link href="/stylesheets/navbar.css" rel="stylesheet">
 <link href="/stylesheets/project.css" rel="stylesheet">
+<link href="/stylesheets/preloader.css" rel="stylesheet">
 
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Cabin|Open+Sans" rel="stylesheet">
@@ -60,9 +61,6 @@
     line-height: 2;
     font-weight: bold;
 }
-
-
-
 
 
 html * {
@@ -624,6 +622,24 @@ a:hover{
 </style>
 
 <script>
+    
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    
     $(function () {
       $(document).scroll(function () {
             var $nav = $(".navbar-fixed-top");
@@ -660,8 +676,45 @@ a:hover{
         return false;
     });
     
+    /*
     
+    javascript version for preloader transition
     
+    function onReady(callback) {
+        var intervalID = window.setInterval(checkReady, 1000);
+
+        function checkReady() {
+            if (document.getElementsByTagName('body')[0] !== undefined) {
+                window.clearInterval(intervalID);
+                callback.call(this);
+            }
+        }
+    }
+
+    function show(id, value) {
+        document.getElementById(id).style.display = value ? 'block' : 'none';
+    }
+
+    onReady(function () {
+        show('contents', true);
+        show('loading', false);
+    });
+    */
+    
+    // jquery version for preloader
+    
+    $(document).ready(function() {
+        $(window).load(function() { 
+            fadetime = 500;
+            function hidepreloader() {
+                var preloader = $('.spinner-wrapper');
+                preloader.fadeOut(fadetime);
+            }
+            hidepreloader();
+        });
+    });
+    
+
 
 </script>
 
