@@ -65,22 +65,6 @@ app.use('/', routes);
 app.use('/contact', contact);
 app.use('/project', project);
 
-app.use( bodyParser.json() );       // to support JSON-encoded bodies
-app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
-  extended: true
-})); 
-
-app.use(express.json());       // to support JSON-encoded bodies
-app.use(express.urlencoded()); // to support URL-encoded bodies
-
-app.post('/', function(req, res) {
-    var first = req.body.First;
-    var last = req.body.Last;
-    var email = req.body.Email;
-    var message = req.body.Message;
-
-    res.send(first + last + email + message);
-});
 
 
 // catch 404 and forward to error handler
