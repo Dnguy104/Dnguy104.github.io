@@ -106,19 +106,19 @@
 @media only screen and (max-width: 480px) {
       .navbar-brand { 
             font-size: 2.5em;
-          -webkit-transform: translateY(4px);
-          -moz-transform:  translateY(4px);
-          -ms-transform:  translateY(4px);
-          -o-transform: translateY(4px);
-            transform: translateY(4px);
+          -webkit-transform: translateY(2px);
+          -moz-transform:  translateY(2px);
+          -ms-transform:  translateY(2px);
+          -o-transform: translateY(2px);
+            transform: translateY(2px);
       }
       .navbar-fixed-top.scrolled .navbar-brand { 
         font-size: 2.5em;
-        -webkit-transform: translateY(4px);
-        -moz-transform:  translateY(4px);
-        -ms-transform:  translateY(4px);
-        -o-transform: translateY(4px);
-        transform: translateY(4px);
+        -webkit-transform: translateY(2px);
+        -moz-transform:  translateY(2px);
+        -ms-transform:  translateY(2px);
+        -o-transform: translateY(2px);
+        transform: translateY(2px);
     }
 }
 

@@ -10,11 +10,13 @@
 }
 
 .spinner {
-  width: 50px;
-  height: 40px;
-  position: absolute;
-  top: 48%;
-  left: 48%;
+  width: 100px;
+  height: 50px;
+  position: relative;
+  top: 50%;
+        left: 50%;
+        margin-right: -50%;
+    transform: translate(-50%, -50%);
   text-align: center;
   font-size: 10px;
 }
@@ -29,24 +31,33 @@
   animation: sk-stretchdelay 1.2s infinite ease-in-out;
 }
 
+.spinner .rect1 {
+  background-color: #597a80;
+}
+
+
 .spinner .rect2 {
   -webkit-animation-delay: -1.1s;
   animation-delay: -1.1s;
+  background-color: #586c77;
 }
 
 .spinner .rect3 {
   -webkit-animation-delay: -1.0s;
   animation-delay: -1.0s;
+  background-color: #516577;
 }
 
 .spinner .rect4 {
   -webkit-animation-delay: -0.9s;
   animation-delay: -0.9s;
+  background-color: #366780;
 }
 
 .spinner .rect5 {
   -webkit-animation-delay: -0.8s;
   animation-delay: -0.8s;
+  background-color: #1f6082;
 }
 
 @-webkit-keyframes sk-stretchdelay {
