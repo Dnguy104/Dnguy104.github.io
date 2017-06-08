@@ -44,7 +44,7 @@
             <div class="modal-body">
                 <div class="contact-form">
 
-                      <form id="horizontal-form" method="POST" id="contact-form">
+                      <form id="horizontal-form" method="POST" action="https://formspree.io/danielnguyen44@gmail.com"id="contact-form">
                             <div class="form-group">
                                 <input type="text" class="wide" id="First" name="first" placeholder=" First Name" data-validate="required">
                             </div>
@@ -55,9 +55,11 @@
                                 <input type="text" class="wide" id="Email" name="_replyto" data-validate="required,email,max(100)"placeholder=" Email address">
                             </div>
                             <div class="form-group">
-                                <textarea class="wide" rows="10" id="Message" name="content" placeholder="Type your message here." form="contact-form" data-validate="required"></textarea>
+                                <textarea class="wide" rows="10" id="Message" name="message" placeholder="Type your message here." form="contact-form" data-validate="required"></textarea>
                             </div>
+                            
                             <input class="hidden" type="text" name="_gotcha"/>
+                            <input type="hidden" name="_next" value="http://127.0.0.1:3000/" />
                             <div id="button-hold">
                                 <button class="submit" value="Send">Send</button>
                             </div>
