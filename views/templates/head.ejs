@@ -2,7 +2,7 @@
 <title><%= title %></title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="personal wensite">
+<meta name="description" content="personal website">
 <meta name="author" content="Daniel Nguyen">
 
 <!-- styles -->
@@ -10,6 +10,7 @@
 <link href="/stylesheets/navbar.css" rel="stylesheet">
 <link href="/stylesheets/project.css" rel="stylesheet">
 <link href="/stylesheets/preloader.css" rel="stylesheet">
+<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
 
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Cabin|Open+Sans" rel="stylesheet">
@@ -691,13 +692,13 @@ a:hover{
     */
     
     // jquery version for preloader
-
+    var test = document.getElementById("spinner-wrapper");
     
-    $(document).ready(function() {
+
         $(window).on('load', function () {
             $('#spinner-wrapper').fadeOut(1000);
         });
-    });
+
     
 
 </script>
