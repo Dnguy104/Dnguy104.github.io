@@ -6,7 +6,7 @@
 #inner-wrap {
   min-width: 320px;
   max-width: 1000px;
-
+  
   margin: 0 auto;
   background: white;
 }
@@ -23,7 +23,11 @@
 @media screen and (min-width: 768px) {
   #inner-wrap label {
     padding: 20px 25px;
+    }
+    
+  #inner-wrap section  {
 
+    min-height: 500px;
   }
   
 }
@@ -88,3 +92,6 @@ section p{
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
+
+
