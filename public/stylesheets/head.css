@@ -1,23 +1,20 @@
 
 
 
-<!-- icon links -->
 
-
-<style>
 @font-face {
     font-family: ostrich;
-    src: url("/stylesheets/OstrichSans-Heavy.otf") format("opentype");
+    src: url("OstrichSans-Heavy.otf") format("opentype");
 }
 
 @font-face {
     font-family: hhh;
-    src: url("/stylesheets/HelveticaNeue.ttf") format("opentype");
+    src: url("HelveticaNeue.ttf") format("opentype");
 }
 
 @font-face {
     font-family: ostrichm;
-    src: url("/stylesheets/OstrichSans-Medium.otf") format("opentype");
+    src: url("OstrichSans-Medium.otf") format("opentype");
 }
 
 .circular--landscape {
@@ -142,7 +139,7 @@ Modules - reusable parts of our design
 }
 
 .cd-fixed-bg.cd-bg-1 {
-    background-image: url("/images/1080laptop.jpg");
+    background-image: url("../images/1080laptop.jpg");
     min-height: 100%;
     background-attachment: fixed;
     position: relative;
@@ -157,7 +154,7 @@ Modules - reusable parts of our design
 }
 
 .cd-fixed-bg.cd-bg-3 {
-    background-image: url("/images/code1.jpg");
+    background-image: url("../images/code1.jpg");
     height:100%;
     width: 100%;
     font-weight: bold;
@@ -171,7 +168,7 @@ Modules - reusable parts of our design
 }
 
 .cd-fixed-bg.quote {
-    background-image: url("/images/rock.jpg");
+    background-image: url("../images/rock.jpg");
     min-height: 85%;
     background-attachment: fixed;
     font-weight: bold;
@@ -622,80 +619,3 @@ a:hover{
     transform: rotate(-45deg);
     box-sizing: border-box;
 }
-
-
-</style>
-
-<script type="text/javascript">
-    $(function () {
-      $(document).scroll(function () {
-            var $nav = $(".navbar-fixed-top");
-            $nav.toggleClass('scrolled', $(this).scrollTop() > 10);
-
-        });
-    });
-
-    $(window).scroll(function() {
-        if ($(this).scrollTop() < 10) {
-            $('#section02').fadeIn();
-        } else {
-            $('#section02').fadeOut();
-        }
-    });
-
-
-    $("#press").click(function(){
-        $("html, body").animate({ scrollTop: 1000 }, 600);
-         return false;
-    });
-
-    var message = "";
-
-    $(".submit").on("click", function() {
-        message = $("#horizontal-form").serialize();
-        $.ajax({
-            url: "http://formspree.io/danielnguyen44@gmail.com",
-            method: "POST",
-            data: {message: message},
-            dataType: "json"
-        });
-        alert('Thanks for the email, I\'ll be in touch promptly.');
-        return false;
-    });
-
-    /*
-
-    javascript version for preloader transition
-
-    function onReady(callback) {
-        var intervalID = window.setInterval(checkReady, 1000);
-
-        function checkReady() {
-            if (document.getElementsByTagName('body')[0] !== undefined) {
-                window.clearInterval(intervalID);
-                callback.call(this);
-            }
-        }
-    }
-
-    function show(id, value) {
-        document.getElementById(id).style.display = value ? 'block' : 'none';
-    }
-
-    onReady(function () {
-        show('contents', true);
-        show('loading', false);
-    });
-    */
-
-    // jquery version for preloader
-    var test = document.getElementById("spinner-wrapper");
-
-
-        $(window).on('load', function () {
-            $('#spinner-wrapper').fadeOut(1000);
-        });
-
-
-
-</script>
