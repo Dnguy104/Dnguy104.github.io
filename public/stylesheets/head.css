@@ -532,7 +532,7 @@ td a:hover {
 
 }
 
-a:hover{
+.links a:hover, .footer-links a:hover{
       text-decoration: none;
 }
 
