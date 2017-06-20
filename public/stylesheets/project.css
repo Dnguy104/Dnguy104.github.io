@@ -6,17 +6,28 @@
 #inner-wrap {
   min-width: 320px;
   max-width: 1000px;
-  
+
   margin: 0 auto;
   background: white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and  (min-width: 480px){
   #inner-wrap label {
     padding: 10px 15px;
     font-size: .7em;
   }
-  
+
+}
+
+@media screen and (max-width: 480px){
+    #inner-wrap label {
+      padding: 7px 9px;
+      font-size: .7em;
+    }
+  #inner-wrap #tabname {
+      display: none;
+  }
+
 }
 
 
@@ -24,12 +35,12 @@
   #inner-wrap label {
     padding: 20px 25px;
     }
-    
+
   #inner-wrap section  {
 
     min-height: 500px;
   }
-  
+
 }
 
 
@@ -92,6 +103,3 @@ section p{
     from {opacity: 0;}
     to {opacity: 1;}
 }
-
-
-

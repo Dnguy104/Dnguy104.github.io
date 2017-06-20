@@ -56,7 +56,6 @@ html * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
 }
 
 
@@ -138,16 +137,6 @@ Modules - reusable parts of our design
   color: white;
 }
 
-.cd-fixed-bg.cd-bg-1 {
-    background-image: url("../images/1080laptop.jpg");
-    min-height: 100%;
-    background-attachment: fixed;
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 1;
-}
 
 .project-header{
     height: 30%;
@@ -167,17 +156,6 @@ Modules - reusable parts of our design
     filter: brightness(70%);
 }
 
-.cd-fixed-bg.quote {
-    background-image: url("../images/rock.jpg");
-    min-height: 85%;
-    background-attachment: fixed;
-    font-weight: bold;
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 1;
-}
 
 
 
@@ -328,7 +306,30 @@ td a:hover {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-}
+    }
+
+    .cd-fixed-bg.quote {
+        background-image: url("../images/rock2.jpg");
+        min-height: 85%;
+        background-attachment: fixed;
+        font-weight: bold;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 1;
+    }
+
+    .cd-fixed-bg.cd-bg-1 {
+        background-image: url("../images/1080laptop2.jpg");
+        min-height: 100%;
+        background-attachment: fixed;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 1;
+    }
 }
 
 
@@ -427,7 +428,55 @@ td a:hover {
 
 }
 
+@media only screen and (max-width: 768px) and (min-width: 480px){
+    .cd-fixed-bg.quote {
+        background-image: url("../images/rock1.jpg");
+        min-height: 85%;
+        background-attachment: fixed;
+        font-weight: bold;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 1;
+    }
+
+    .cd-fixed-bg.cd-bg-1 {
+        background-image: url("../images/1080laptop1.jpg");
+        min-height: 100%;
+        background-attachment: fixed;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 1;
+    }
+}
+
 @media only screen and (min-width: 768px) {
+
+    .cd-fixed-bg.quote {
+        background-image: url("../images/rock.jpg");
+        min-height: 85%;
+        background-attachment: fixed;
+        font-weight: bold;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 1;
+    }
+
+    .cd-fixed-bg.cd-bg-1 {
+        background-image: url("../images/1080laptop.jpg");
+        min-height: 100%;
+        background-attachment: fixed;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 1;
+    }
 
         .cd-fixed-bg .h123 h2{
             word-spacing: 0.2em;
@@ -447,7 +496,7 @@ td a:hover {
         .circular--landscape img{
             margin-top: 5px;
             margin-right: 30px;
-            max-width: 400px;
+            width: 400px;
 
             float:left;
         }
@@ -524,8 +573,12 @@ td a:hover {
     fill: #28a2ff;
 }
 
+.footer-text {
+    -webkit-appearance: none;
+}
 
-.links svg:hover, .footer-links svg:hover {
+
+.links svg:hover, .footer-links svg:hover, .heart:hover {
     fill: #28a2ff;
     position: relative;
     transform: translate(0px, -5px);

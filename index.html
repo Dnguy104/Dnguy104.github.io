@@ -5,8 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Home</title>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width=1, initial-scale=1, maximum-scale=1">
 	<meta name="description" content="personal website">
 	<meta name="author" content="Daniel Nguyen">
 
@@ -21,84 +20,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Cabin|Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif" rel="stylesheet">
 
-	<script src="public/lib/jquery/jquery.min.js"></script>
 
-	<!-- Need mroe Bootstrap features? Uncomment some lines below. -->
-	<script src="public/lib/bootstrap/js/bootstrap.min.js"></script>
-
-	<script type="text/javascript">
-	    $(function () {
-	      $(document).scroll(function () {
-	            var $nav = $(".navbar-fixed-top");
-	            $nav.toggleClass('scrolled', $(this).scrollTop() > 10);
-
-	        });
-	    });
-
-	    $(window).scroll(function() {
-	        if ($(this).scrollTop() < 10) {
-	            $('#section02').fadeIn();
-	        } else {
-	            $('#section02').fadeOut();
-	        }
-	    });
-
-
-	    $("#press").click(function(){
-	        $("html, body").animate({ scrollTop: 1000 }, 600);
-	         return false;
-	    });
-
-	    var message = "";
-
-	    $(".submit").on("click", function() {
-	        message = $("#horizontal-form").serialize();
-	        $.ajax({
-	            url: "http://formspree.io/danielnguyen44@gmail.com",
-	            method: "POST",
-	            data: {message: message},
-	            dataType: "json"
-	        });
-	        alert('Thanks for the email, I\'ll be in touch promptly.');
-	        return false;
-	    });
-
-	    /*
-
-	    javascript version for preloader transition
-
-	    function onReady(callback) {
-	        var intervalID = window.setInterval(checkReady, 1000);
-
-	        function checkReady() {
-	            if (document.getElementsByTagName('body')[0] !== undefined) {
-	                window.clearInterval(intervalID);
-	                callback.call(this);
-	            }
-	        }
-	    }
-
-	    function show(id, value) {
-	        document.getElementById(id).style.display = value ? 'block' : 'none';
-	    }
-
-	    onReady(function () {
-	        show('contents', true);
-	        show('loading', false);
-	    });
-	    */
-
-	    // jquery version for preloader
-	    var test = document.getElementById("spinner-wrapper");
-
-
-	        $(window).on('load', function () {
-	            $('#spinner-wrapper').fadeOut(1000);
-	        });
-
-
-
-	</script>
 </head>
 
 
@@ -239,8 +161,8 @@
 					<img src="public/images/html.png"height="75px" width="75px">
 					<img src="public/images/css.png"height="75px" width="75px">
 					<br >
-					<img src="public/images/git.jpg" height="40px" width="auto">
-					<img src="public/images/matlab.png" height="40px" width="auto">
+					<img src="public/images/git.jpg" >
+					<img src="public/images/matlab.png" >
 				</div>
 			</div>
 
@@ -332,13 +254,20 @@
 						</div>
 
 				   		<p>Coded with <svg class="heart" width=10px height=auto viewBox="0 0 32 29.6">
-			  <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
-				c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
-			</svg> by Daniel Nguyen - 2017</p>
+						  <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+							c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+						</svg> by Daniel Nguyen - 2017</p>
 
 			    </div>
 			</div>
 	</div> <!-- cd-main-content -->
+
+	<script src="public/lib/jquery/jquery.min.js"></script>
+
+	<!-- Need mroe Bootstrap features? Uncomment some lines below. -->
+	<script src="public/lib/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="public/stylesheets/head.js"></script>
 
 </body>
 
