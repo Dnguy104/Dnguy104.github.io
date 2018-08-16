@@ -63,35 +63,9 @@
 	</div>
 </div>
 
-<div id="tab-wrap">
-
-<div id="inner-wrap">
-
-		  <input id="tab1" type="radio" name="tabs" checked>
-		  <label for="tab1">Personal <span id="tabname">Projects</span></label>
-
-		  <input id="tab2" type="radio" name="tabs">
-		  <label for="tab2">Hackathon <span id="tabname">Projects</span></label>
-
-		  <input id="tab3" type="radio" name="tabs">
-		  <label for="tab3">School <span id="tabname">Projects</span></label>
 
 
-  <section id="content1">
-	<h2>Under Construction</h2>
-  </section>
 
-  <section id="content2">
-
-  </section>
-
-  <section id="content3">
-
-  </section>
-
-  </div>
-
-</div>
 
 <div class=" cd-scrolling-bg footer-text ">
 
@@ -134,24 +108,7 @@
 <!-- Need mroe Bootstrap features? Uncomment some lines below. -->
 <script src="public/lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="public/stylesheets/head.js"></script>
-<script>
-function openCity(evt, cityName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
 
 </body>
 </html>
