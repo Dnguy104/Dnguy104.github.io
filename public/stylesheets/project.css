@@ -1,3 +1,51 @@
+@font-face {
+    font-family: hhh;
+    src: url("HelveticaNeue.ttf") format("opentype");
+}
+
 #content {
-  height:1000px;
+  height:2000px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  
+}
+
+.grid-item > img {
+  
+  height: 100%;
+  width: 100%;
+  padding-bottom: 10px;
+  display: block;
+}
+
+.grid-item {
+    padding: 40px 40px;
+}
+
+h2 {
+    margin: 5px auto;
+    
+}
+
+p {
+    font-family: 'PT Mono', monospace;
+    font-size: 1em;
+    line-height: 1.6;
+
+}
+
+@media (max-width: 900px) { /*breakpoint*/
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto;
+      
+    }
+
+}
+
+button {
+    display: inline;
 }
