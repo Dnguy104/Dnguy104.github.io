@@ -1,4 +1,4 @@
-@font-face {
+a@font-face {
     font-family: hhh;
     src: url("HelveticaNeue.ttf") format("opentype");
 }
@@ -13,6 +13,11 @@
   
 }
 
+.grid-container-js{
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
 .grid-item > img {
   
   width: 100%;
@@ -21,12 +26,18 @@
 }
 
 .grid-item {
+    width: 100%;
     padding: 40px 40px;
 }
 
 h2 {
     padding: 5px auto;
     
+}
+
+#js_project {
+  text-align: center;
+  font-size: 30pt;
 }
 
 p {

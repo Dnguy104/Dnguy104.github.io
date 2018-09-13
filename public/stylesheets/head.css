@@ -129,7 +129,7 @@ Modules - reusable parts of our design
   -ms-transform:  translateY(-110%);
   -o-transform: translateY(-110%);
   transform:  translateY(-110%);
-  font-family: "ostrichm";
+  font-family: "ostrich";
   z-index: 3;
   width: 100%;
   text-align: center;
@@ -490,7 +490,7 @@ td a:hover {
         }
 
         .cd-fixed-bg .h12 h1, .phead h1{
-            font-size: 5em;
+            font-size: 4em;
         }
 
 
