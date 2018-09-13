@@ -457,7 +457,7 @@ td a:hover {
 @media only screen and (min-width: 768px) {
 
     .cd-fixed-bg.quote {
-        background-image: url("../images/rock.jpg");
+        background-image: url("../images/rock1.jpg");
         min-height: 85%;
         background-attachment: fixed;
         font-weight: bold;
@@ -469,7 +469,7 @@ td a:hover {
     }
 
     .cd-fixed-bg.cd-bg-1 {
-        background-image: url("../images/1080laptop.jpg");
+        background-image: url("../images/1080laptop1.jpg");
         min-height: 100%;
         background-attachment: fixed;
         position: relative;
