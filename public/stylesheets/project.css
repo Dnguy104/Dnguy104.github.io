@@ -3,9 +3,6 @@ a@font-face {
     src: url("HelveticaNeue.ttf") format("opentype");
 }
 
-#content {
-  height:2000px;
-}
 
 .grid-container {
   display: grid;
