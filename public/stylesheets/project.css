@@ -15,7 +15,7 @@ a@font-face {
   grid-template-columns: 33.3% 33.3% 33.3%;
 }
 
-.grid-item > img {
+.grid-item > a >img {
   
   width: 100%;
   margin-bottom: 10px;
@@ -52,7 +52,9 @@ p {
     }
 
 }
-
+.footer-text {
+  margin-top: 50px;
+}
 button {
     display: inline;
 }
